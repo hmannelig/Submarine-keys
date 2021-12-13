@@ -1,5 +1,6 @@
 package counter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Counter {
@@ -18,5 +19,18 @@ public class Counter {
             previous = next;
         }
         return counter;
+    }
+
+    public int countMedianIncreases(List<Integer> values) {
+
+        int increases = 0;
+        int prev = values.get(0) + values.get(2) + values.get(3);
+        for (int index = 1; index < values.size() - 2; ++index) {
+            int next = values.get(index) + values.get(index + 1) + values.get(index + 2);
+            increases += next > prev ? 1 : 0;
+            prev = next;
+        }
+
+        return increases;
     }
 }

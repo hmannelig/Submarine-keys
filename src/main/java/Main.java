@@ -2,6 +2,7 @@ import counter.Counter;
 import reader.Reader;
 import utils.ListParser;
 import utils.Movement;
+
 import java.util.List;
 
 public class Main {

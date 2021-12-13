@@ -42,7 +42,7 @@ public class Movement {
 
         int h = 0, v = 0;
         for (int index = 0; index < this.distance.size(); index++) {
-            if(this.direction.get(index).equals("forward")) {
+            if (this.direction.get(index).equals("forward")) {
                 h += this.getMovement(index);
             } else {
                 v += this.getMovement(index);
@@ -57,9 +57,9 @@ public class Movement {
         for (int index = 0; index < this.distance.size(); index++) {
 
             int input = this.getMovement(index);
-            if(this.direction.get(index).equals("forward")) {
+            if (this.direction.get(index).equals("forward")) {
                 h += input;
-                v += input*a;
+                v += input * a;
             } else {
                 a += input;
             }
