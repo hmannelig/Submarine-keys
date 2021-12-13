@@ -13,4 +13,15 @@ public class ListParser {
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
     }
+
+    public static Movement convertToMovement(List<String> values) {
+        Movement moves = new Movement();
+
+        for (String s : values) {
+            String[] move = s.split(" ");
+            moves.addInstruction(move[0], move[1]);
+        }
+
+        return moves;
+    }
 }
