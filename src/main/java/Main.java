@@ -2,7 +2,6 @@ import counter.Counter;
 import reader.Reader;
 import utils.ListParser;
 import utils.Movement;
-
 import java.util.List;
 
 public class Main {
@@ -20,11 +19,15 @@ public class Main {
 
     private static void firstExercise(Counter counter, Reader reader, String path) {
         List<Integer> values = ListParser.convertToIntegerList(reader.readValues(path));
+
         System.out.println("First exercise solution: " + counter.countIncreases(values));
+        System.out.println("First exercise solution with three-measurement windows: " + counter.countMedianIncreases(values));
     }
 
     private static void secondExercise(Reader reader, String path) {
         Movement move = ListParser.convertToMovement(reader.readValues(path));
+
         System.out.println("Second exercise solution: " + move.getMovementMultiplied());
+        System.out.println("Second exercise solution with AIM: " + move.getMovementMultipliedWithAim());
     }
 }
