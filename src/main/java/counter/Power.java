@@ -32,8 +32,8 @@ public class Power {
         StringBuilder g = new StringBuilder();
         StringBuilder e = new StringBuilder();
 
-        for(int i = 0; i < temp.length; ++i) {
-            if (temp[i] > values.size() / 2) {
+        for (int j : temp) {
+            if (j > values.size() / 2) {
                 g.append(1);
                 e.append(0);
             } else {
