@@ -1,4 +1,4 @@
-package utils;
+package counter;
 
 import lombok.Getter;
 import lombok.Setter;
