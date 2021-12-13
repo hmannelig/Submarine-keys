@@ -39,13 +39,29 @@ public class Movement {
     }
 
     public int getMovementMultiplied() {
-        int h = 0, v = 0;
 
+        int h = 0, v = 0;
         for (int index = 0; index < this.distance.size(); index++) {
             if(this.direction.get(index).equals("forward")) {
                 h += this.getMovement(index);
             } else {
                 v += this.getMovement(index);
+            }
+        }
+        return h * v;
+    }
+
+    public int getMovementMultipliedWithAim() {
+
+        int h = 0, v = 0, a = 0;
+        for (int index = 0; index < this.distance.size(); index++) {
+
+            int input = this.getMovement(index);
+            if(this.direction.get(index).equals("forward")) {
+                h += input;
+                v += input*a;
+            } else {
+                a += input;
             }
         }
         return h * v;
