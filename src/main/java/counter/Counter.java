@@ -9,6 +9,7 @@ public class Counter {
     }
 
     public int countIncreases(List<Integer> values) {
+
         int counter = 0;
         int previous = values.get(0);
         for (Integer value : values.subList(1, values.size())) {
@@ -18,6 +19,7 @@ public class Counter {
             }
             previous = next;
         }
+
         return counter;
     }
 
